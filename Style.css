@@ -1,0 +1,188 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+svg {
+    width: 350px;
+}
+
+div {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    color: white;
+    font-size: 20px;
+    text-decoration-style: solid;
+    padding: 1rem;
+    margin: 1rem;
+    display: block;
+    justify-content: center;
+    border: 5px solid hsl(90, 100%, 20%);
+    background-color: hsl(150, 50%, 40%);
+    border-radius: 0.3rem;
+}
+
+button:hover {
+    background-color: hsl(60, 100%, 10%);
+}
+
+.box {
+    fill: url(#linear-gradient);
+    position: absolute;
+    z-index: 1;
+}
+
+.box:hover {
+    opacity: 0.2;
+}
+
+.balloon1 {
+    fill: #fbb03b;
+}
+
+.balloon2 {
+    fill: #c1272d;
+}
+
+.balloon3 {
+    fill: #006837;
+}
+
+.balloon4 {
+    fill: #736357;
+}
+
+.balloon5 {
+    fill: #f0f;
+}
+
+.balloon6 {
+    fill: #d9e021;
+}
+
+.svgballoons {
+    position: absolute;
+    height: 20%;
+    width: 20%;
+}
+
+.title {
+    animation: svgTitle 9s 1;
+}
+
+@keyframes svgTitle {
+    0% {
+        transform: translateY(0rem) translateX(3rem) rotateZ(0deg);
+    }
+
+    25% {
+        transform: translateY(-12rem) translateX(10rem) rotateZ(0deg);
+    }
+
+    50% {
+        transform: translateY(-8rem) translateX(18rem) rotateZ(0deg);
+    }
+
+    75% {
+        transform: translateY(-14rem) translateX(25rem) rotateZ(0deg);
+    }
+
+    90% {
+        transform: translateY(-24rem) translateX(35rem) rotateZ(0deg);
+    }
+
+    95% {
+        transform: translateY(-24rem) translateX(29rem) rotateZ(0deg);
+        visibility: hidden;
+    }
+
+    100% {
+        visibility: hidden;
+    }
+
+}
+
+.balloons1 {
+    animation: svgballoons 6s infinite;
+}
+
+.balloons2 {
+    animation: svgballoons 6s infinite;
+    animation-delay: 0.4s;
+}
+
+.balloons3 {
+    animation: svgballoons 5s infinite;
+    animation-delay: 0.8s;
+}
+
+.balloons4 {
+    animation: svgballoons 5s infinite;
+    animation-delay: 1.2s;
+}
+
+.balloons5 {
+    animation: svgballoons 7s infinite;
+    animation-delay: 1.6s;
+}
+
+.balloons6 {
+    animation: svgballoons 5s infinite;
+    animation-delay: 2s;
+}
+
+/*
+.balloons6 {
+    position: absolute;
+    height: 20%;
+    width: 20%;
+    z-index: -1;
+    transform-origin: center;
+    animation-timing-function: linear;
+    animation: svgballoons 4s 2;
+    animation-delay: 1.25s;
+}
+*/
+
+@keyframes svgballoons {
+    0% {
+        transform: translateY(0rem) rotateZ(0deg);
+    }
+
+    10% {
+        transform: translateY(-4rem) rotateZ(-10deg);
+    }
+
+    20% {
+        transform: translateY(-8rem) rotateZ(-20deg);
+    }
+
+    30% {
+        transform: translateY(-12rem) rotateZ(-10deg);
+    }
+
+    40% {
+        transform: translateY(-16rem) rotateZ(0deg);
+    }
+
+    50% {
+        transform: translateY(-20rem) rotateZ(10deg);
+    }
+
+    60% {
+        transform: translateY(-24rem) rotateZ(20deg);
+    }
+
+    80% {
+        transform: translateY(-26rem) rotateZ(80deg);
+    }
+
+    100% {
+        transform: translateY(-28rem) rotateZ(-90deg);
+    }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SVG Animation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="icon" href="H.png">
+    <script src="JavaScript.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+
+    <br><br>
+    <button id="startAnim" class="startAnim">Blow Balloons</button>
+    <button id="stopAnim" class="startAnim">Stop Ballons</button>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div>
+
+        <h3 id="title">This is an SVG & CSS animation.</h3>
+
+        <svg id="box" class="box" viewBox="0 0 1436 990.5">
+            <linearGradient id="linear-gradient" x1="0.5" y1="512" x2="1848.5" y2="512" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#9e005d" />
+                <stop offset="1" stop-color="#2e3192" />
+            </linearGradient>
+            <rect class="box" x="0.5" y="0.5" width="1848" height="1023" />
+            <path d="M2285,336V1358H438V336H2285m1-1H437V1359H2286V335Z" transform="translate(-437 -335)" />
+        </svg>
+
+        <svg id="balloons1" class="svgballoons" viewBox="0 0 1345.94 707.53">
+            <path id="balloon1" class="balloon1" d="M1809.34,840.71c12.79-34.5,275.61-286,42.89-323.07S1809.34,840.71,1809.34,840.71Z" transform="translate(-650.29 -514.97)" />
+        </svg>
+
+        <svg id="balloons2" class="svgballoons" viewBox="0 0 1345.94 707.53">
+            <path id="balloon2" class="balloon2" d="M831.4,852.07c-3.47-36.63,123.93-377.38-101.76-309.61S831.4,852.07,831.4,852.07Z" transform="translate(-650.29 -514.97)" />
+        </svg>
+
+        <svg id="balloons3" class="svgballoons" viewBox="0 0 1345.94 707.53">
+            <path id="balloon3" class="balloon3" d="M1967.11,1213.51C1963,1177,2084.37,834,1859.91,905.75S1967.11,1213.51,1967.11,1213.51Z" transform="translate(-650.29 -514.97)" />
+        </svg>
+
+        <svg id="balloons4" class="svgballoons" viewBox="0 0 1345.94 707.53">
+            <path id="balloon4" class="balloon4" d="M1338,1149.59c18.43-31.85,319.89-235.47,96.76-311.21S1338,1149.59,1338,1149.59Z" transform="translate(-650.29 -514.97)" />
+        </svg>
+
+        <svg id="balloons5" class="svgballoons" viewBox="0 0 1345.94 707.53">
+            <path id="balloon5" class="balloon5" d="M1221.71,860.38c11.2-35,262.2-298.37,28-324.7S1221.71,860.38,1221.71,860.38Z" transform="translate(-650.29 -514.97)" />
+        </svg>
+
+        <svg id="balloons6" class="svgballoons" viewBox="0 0 1345.94 707.53">
+            <path id="balloon6" class="balloon6" d="M863.65,1222.5c7.22-36.08,227.23-325.79-8.41-325.79S863.65,1222.5,863.65,1222.5Z" transform="translate(-650.29 -514.97)" />
+        </svg>
+        
+    </div>
+    
+</body>
+
+<script>
+    $(document).ready(function() {
+        $("#startAnim").click(function() {
+
+            $("#title").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function() {
+                $(this).removeClass("title");
+            }).addClass("title");
+
+            $("#balloons1").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function() {
+                $(this).removeClass("balloons1");
+            }).addClass("balloons1");
+
+            $("#balloons2").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function() {
+                $(this).removeClass("balloons2");
+            }).addClass("balloons2");
+
+            $("#balloons3").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function() {
+                $(this).removeClass("balloons3");
+            }).addClass("balloons3");
+
+            $("#balloons4").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function() {
+                $(this).removeClass("balloons4");
+            }).addClass("balloons4");
+
+            $("#balloons5").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function() {
+                $(this).removeClass("balloons5");
+            }).addClass("balloons5");
+
+            $("#balloons6").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function() {
+                $(this).removeClass("balloons6");
+            }).addClass("balloons6");
+
+        });
+
+        $("#stopAnim").click(function() {
+
+            $("#balloons1").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function() {
+                $(this).removeClass("balloons1");
+            }).removeClass("balloons1");
+
+            $("#balloons2").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function() {
+                $(this).removeClass("balloons2");
+            }).removeClass("balloons2");
+
+            $("#balloons3").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function() {
+                $(this).removeClass("balloons3");
+            }).removeClass("balloons3");
+
+            $("#balloons4").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function() {
+                $(this).removeClass("balloons4");
+            }).removeClass("balloons4");
+
+            $("#balloons5").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function() {
+                $(this).removeClass("balloons5");
+            }).removeClass("balloons5");
+
+            $("#balloons6").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function() {
+                $(this).removeClass("balloons6");
+            }).removeClass("balloons6");
+
+        });
+    });
+
+</script>
+
+</html>
